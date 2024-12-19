@@ -1,0 +1,46 @@
+<script>
+    /*
+    Problema: Venda de Camisas
+    Peça para o atendente da loja de roupas informar quantas camisas da Seleção Brasileira foram vendidas nos dias anteriores ao jogo.
+    Para cada camisa vendida, pergunte qual foi a cor (B-Azul ou A-Amarela) e também o preço final da venda, considerando que o preço poderia variar nos dias mais próximos do jogo.
+    Apresente a quantidade de camisas azuis e de camisas amarelas vendidas e também quanto foi faturado em vendas para cada cor de camisa.
+    */
+
+    //Entrada
+    const camisas = Number(prompt(`Quantas camisas da Seleção Brasileira foram vendidas nos dias anteriores ao jogo`));
+    let camisetas = [camisas]
+    let azul = [];
+    let amarela = [];
+    //Processamento
+ 
+    for(camisa of camisetas){
+        let cor = prompt(`Qual foi a cor da camisa ${camisa}?: (B)Azul e (A)Amarela:`);
+        if(cor == "B"){
+            azul.push(camisa);
+        }
+        else if(cor == "A"){
+            amarela.push(camisa);
+        }
+        
+        }
+        const precoFinal = Number(prompt(`informe o preço final da venda`));
+        for(let i = 1; i >= precoFinal; i--){
+            document.write(`faturamento: ${i}<br> camisas vendidas :${camisetas} <br> camisas azuis: ${azul.join(" , ")}<br> amarelas: ${amarela.join(" ,")}`);
+        }
+    
+
+    //Saída
+
+
+    /*
+    Exemplo:
+    4 Vendas
+    Camisa Amarela: 130
+    Camisa Amarela: 180
+    Camisa Amarela: 190
+    Camisa Azul: 190
+
+    Camisas Amarelas: 3 venda(s) (R$ 500,00)
+    Camisas Azuis: 1 venda(s) (R$ 190,00)
+    */
+</script>

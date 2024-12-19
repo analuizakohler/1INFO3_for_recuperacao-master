@@ -1,0 +1,31 @@
+<script>
+    /*
+    Problema: Cidades visitadas
+    Considere a lista seguinte:
+    let cidades = ["Rio de Janeiro", "São Paulo", "Recife", "Florianópolis", "Curitiba", "Porto Alegre", "Joinville"];
+    Pergunte ao usuário, cidade por cidade, qual que ele já visitou.
+    Apresente a lista de cidades separadas entre visitadas e não visitadas.
+    */
+
+    //Entrada
+    let cidades = ["Rio de Janeiro", "São Paulo", "Recife", "Florianópolis", "Curitiba", "Porto Alegre", "Joinville"];
+    let visitadas = [];
+    let naoVisitadas = [];
+    //Processamento
+    for(item of cidades){
+        let pergunta = prompt(`Informe se vc ja visitou ou não a cidade usando (n) para não e (s) para sim: ${item}`);
+        if(pergunta == "N"){
+            naoVisitadas.push(item);
+        }
+        else if(pergunta == "S"){
+            visitadas.push(item);
+        }
+    }
+
+    //Saída
+    document.write(`Visitadas: ${visitadas.join(" , ")}<br> Não visitadas: ${naoVisitadas.join(" , ")}`);
+    /*
+    Visitadas: Rio de Janeiro, Recife, Curitiba.
+    Não visitadas: São Paulo, Florianópolis, Porto Alegre, Joinville.
+    */
+</script>

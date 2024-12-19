@@ -1,0 +1,34 @@
+<script>
+    /*
+    Problema: Orçamento
+    Pergunte ao responsável por compras quantos orçamentos recebeu de um determinado item que deseja comprar.
+    Peça para o comprador informar todos os preços enviados pelos fornecedores. Após, calcule e apresente qual é o preço médio do item e também o menor preço orçado.
+    */
+
+    //Entrada
+   
+    const orcamento = Number(prompt(`Informe quantos orçamentos vc recebeu do item que deseja comprar`));
+    const orca1 = Number(prompt(`orçamento 1:`));
+    const orca2 = Number(prompt(`orçamento 1:`));
+    const orca3 = Number(prompt(`orçamento 1:`));
+    let precos = [orca1, orca2, orca3];
+    const media = (orca1 + orca2 + orca3) / orcamento;
+    //Processamento
+    for(item of precos){
+        precos.sort(function (a,b){
+            return a-b;
+        })
+    }
+   
+    document.write(`orçamento:${orcamento}<br> preços:${precos}<br> Preço Médio: ${media}<br> Menor Preço: ${precos[0]}`);
+
+    //Saída
+  
+    /*
+    Exemplo:
+    Orçamentos: 3
+    let precos = [26, 32, 23];
+    Preço Médio: R$ 27,00
+    Menor Preço: R$ 23,00
+    */
+</script>
